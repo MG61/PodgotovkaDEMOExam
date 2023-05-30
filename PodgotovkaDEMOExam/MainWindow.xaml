@@ -1,0 +1,19 @@
+﻿<Window x:Class="PodgotovkaDEMOExam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PodgotovkaDEMOExam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,22,0,0" TextWrapping="Wrap" Text="Книжный клуб" VerticalAlignment="Top" Height="49" Width="224" FontSize="32" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,71,0,0" TextWrapping="Wrap" Text="Авторизация" VerticalAlignment="Top" Height="49" Width="224" FontSize="26" TextAlignment="Center"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="40" FontSize="26" TextAlignment="Center" ToolTip="Почта"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Height="40" FontSize="26" TextAlignment="Center" ToolTip="Почта"/>
+        <Button Content="Войти" HorizontalAlignment="Left" Margin="262,298,0,0" VerticalAlignment="Top" Height="43" Width="116"/>
+        <Button Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="419,298,0,0" VerticalAlignment="Top" Height="43" Width="116"/>
+        <Button Content="Анонимный вход" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Height="42" Width="116"/>
+
+    </Grid>
+</Window>

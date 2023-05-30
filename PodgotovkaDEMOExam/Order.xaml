@@ -1,0 +1,37 @@
+﻿<Window x:Class="PodgotovkaDEMOExam.Order"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PodgotovkaDEMOExam"
+        mc:Ignorable="d"
+        Title="Order" Height="508" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="38*"/>
+        </Grid.RowDefinitions>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="19,18,21,17" Name="data">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}"  Header="Name" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Price}" Header="Price" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Quantity}" Header="Quantity" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Total}" Header="Total" Width="100"/>
+                </GridView>
+            </ListView.View>
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Увеличить количество товара" Click="Button_plus_order"></MenuItem>
+                    <MenuItem Header="Уменьшить количество товара" Click="Button_minus_order"></MenuItem>
+                    <MenuItem Header="Удалить товар" Click="Button_delete_order"></MenuItem>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListView>
+        <TextBlock Name="summ" HorizontalAlignment="Left" Margin="321,31,0,0" TextWrapping="Wrap" Text="Сумма" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock Name="discount" HorizontalAlignment="Left" Margin="321,52,0,0" TextWrapping="Wrap" Text="Скидка" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock Name="total" HorizontalAlignment="Left" Margin="19,31,0,0" TextWrapping="Wrap" Text="Скидка с суммой" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button Click="Button_buy_order" Content="Сформировать заказ" HorizontalAlignment="Left" Margin="19,60,0,0" VerticalAlignment="Top" Width="130" Grid.Row="1"/>
+
+    </Grid>
+</Window>
